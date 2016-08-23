@@ -1,6 +1,7 @@
 const express = require('express')
 const http = require('http')
 const morgan = require('morgan')
+const proxy = require('http-proxy')
 
 const app = express()
 
@@ -11,7 +12,7 @@ app.get('/api', (req, res) => {
   res.send('Hello world!')
 })
 app.get('/api/me', (req, res) => {
-  const tenant = req.get('X-My-Custom-Param-1');
+  const tenant = req.get('X-My-Custom-Param-1') || 'no tenant'
   res.send(tenant)
 })
 

@@ -5,10 +5,6 @@ server {
   access_log /var/log/nginx/web.log;
   charset utf-8;
 
-  location /public {
-    alias /src/web/public;
-  }
-
   location / {
     proxy_pass http://web:3000;
     proxy_set_header Host $host;

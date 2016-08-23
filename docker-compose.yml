@@ -3,14 +3,10 @@ services:
     web:
       build: "./web"
       ports:
-        - "3030:3000"
+        - "3000:3000"
     nginx:
       build: "./nginx"
       ports:
         - "80:80"
-      volumes:
-        - /www/public
-      volumes_from:
-        - web
       links:
         - web:web
