@@ -1,6 +1,6 @@
 server {
 
-  listen 80 default_server;
+  listen 80;
   server_name ~^(?<user>.+)\.twork\.io$ twork.io;
   access_log /var/log/nginx/web.log;
   charset utf-8;
