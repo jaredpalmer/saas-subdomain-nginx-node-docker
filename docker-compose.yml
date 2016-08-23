@@ -4,8 +4,6 @@ services:
       build: "./web"
       ports:
         - "3030:3000"
-      volumes:
-        - "./web:/src"
     nginx:
       build: "./nginx"
       ports:
