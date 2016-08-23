@@ -1,0 +1,19 @@
+version: "2"
+services:
+    web:
+      build: "./web"
+      ports:
+        - "3030:3000"
+      volumes:
+        - "./web:/src"
+    nginx:
+      build: "./nginx"
+      fip: "209.177.92.224"
+      ports:
+        - "80:80"
+      volumes:
+        - /www/public
+      volumes_from:
+        - web
+      links:
+        - web:web

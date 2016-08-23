@@ -1,0 +1,20 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "http-proxy": "^1.14.0",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}
