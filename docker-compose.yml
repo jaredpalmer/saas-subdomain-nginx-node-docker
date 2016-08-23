@@ -1,4 +1,6 @@
 version: "2"
+host: twork
+domainname: twork.io
 services:
     web:
       build: "./web"
@@ -8,7 +10,5 @@ services:
       build: "./nginx"
       ports:
         - "80:80"
-      hostname:
-        - "twork.io:45.55.251.114"
       links:
         - web:web
