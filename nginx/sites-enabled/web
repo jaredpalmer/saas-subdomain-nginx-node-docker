@@ -1,8 +1,7 @@
 server {
 
   listen 80 default_server;
-  listen [::]:80 default_server ipv6only=on;
-  server_name ~^(?<user>.+)\.twork\.dev$;
+  server_name ~^(?<user>.+)\.twork\.io$;
   access_log /var/log/nginx/web.log;
   charset utf-8;
 
