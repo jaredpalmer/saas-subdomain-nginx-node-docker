@@ -8,5 +8,7 @@ services:
       build: "./nginx"
       ports:
         - "80:80"
+      hostname:
+        - "twork.io:45.55.251.114"
       links:
         - web:web
