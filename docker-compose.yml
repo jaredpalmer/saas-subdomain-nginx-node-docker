@@ -8,7 +8,6 @@ services:
         - "./web:/src"
     nginx:
       build: "./nginx"
-      fip: "209.177.92.224"
       ports:
         - "80:80"
       volumes:
