@@ -1,12 +1,12 @@
 version: "2"
-host: twork
-domainname: twork.io
 services:
     web:
       build: "./web"
       ports:
         - "3000:3000"
     nginx:
+      host: "twork"
+      domainname: "twork.io"
       build: "./nginx"
       ports:
         - "80:80"
